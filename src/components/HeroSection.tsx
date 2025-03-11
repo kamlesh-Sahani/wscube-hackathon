@@ -15,7 +15,6 @@ export default function HeroSection() {
     "https://images.unsplash.com/photo-1522202176988-66273c2fd55a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80", // Personalized Learning
     "https://images.unsplash.com/photo-1522202176988-66273c2fd55a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80", // Personalized Learning
     "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-
   ];
 
   return (
@@ -75,9 +74,12 @@ export default function HeroSection() {
         transition={{ duration: 1, delay: 0.5 }}
         className="relative z-10 text-center mt-12"
       >
-          <h1 className="text-6xl font-bold text-white mb-6">
-                Learn. Play. <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-600">Master.</span>
-              </h1>
+        <h1 className="text-6xl font-bold text-white mb-6">
+          Learn. Play.{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-600">
+            Master.
+          </span>
+        </h1>
         <p className="text-gray-300 text-lg">
           Engage, learn, and grow with AI-powered gamification.
         </p>
@@ -90,15 +92,10 @@ export default function HeroSection() {
         transition={{ duration: 1, delay: 1 }}
         className="relative z-10 mt-8 flex gap-4"
       >
-     
-
-        <button 
-           
-                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 flex items-center mx-auto"
-              >
-                  Get Started
-                <BiChevronRight className="ml-2" />
-              </button>
+        <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 flex items-center mx-auto">
+          Get Started
+          <BiChevronRight className="ml-2" />
+        </button>
 
         <button className="px-6 py-3 bg-transparent border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition-all flex items-center">
           Learn More <FaArrowLeft className="ml-2" />

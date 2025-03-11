@@ -2,48 +2,40 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Link } from "react-scroll";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleMenu = () => setIsOpen(!isOpen);
 
   const navLinks = [
-    { name: "Home", to: "hero" },
-    { name: "Features", to: "features" },
-    { name: "How It Works", to: "how-it-works" },
-    { name: "Pricing", to: "pricing" },
-    { name: "Contact", to: "contact" },
+    { name: "Home", href: "/" },
+    { name: "Features", href: "/features" },
+    // { name: "How It Works", href: "/how-it-works" },
+    { name: "Pricing", href: "/pricing" },
+    { name: "Contact", href: "/contact" },
+    { name: "Dashboard", href: "/dashboard" },
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-black/80 backdrop-blur-md z-50">
+    <nav className="fixed z-[99] top-0 left-0 w-full bg-black/80 backdrop-blur-md ">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        {/* Logo */}
         <div className="text-white text-2xl font-bold">
           <span className="text-pink-500">WSCube </span>LearnFlow
         </div>
-
-        {/* Desktop Navigation Links */}
         <ul className="hidden md:flex space-x-8">
           {navLinks.map((link, index) => (
             <li key={index}>
               <Link
-                to={link.to}
-                smooth={true}
-                duration={500}
-                className="text-white hover:text-blue-500 cursor-pointer transition-all"
+                href={link.href}
+                className="text-white hover:text-blue-500 transition-all"
               >
                 {link.name}
               </Link>
             </li>
           ))}
         </ul>
-
-        {/* Mobile Menu Toggle */}
         <button
           onClick={toggleMenu}
           className="text-white md:hidden focus:outline-none"
@@ -51,8 +43,6 @@ export default function Navbar() {
           {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
         </button>
       </div>
-
-      {/* Mobile Navigation Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -65,11 +55,9 @@ export default function Navbar() {
               {navLinks.map((link, index) => (
                 <li key={index}>
                   <Link
-                    to={link.to}
-                    smooth={true}
-                    duration={500}
-                    onClick={toggleMenu}
-                    className="text-white hover:text-blue-500 cursor-pointer transition-all"
+                    href={link.href}
+                    onClick={() => setIsOpen(false)} // close menu on click
+                    className="text-white hover:text-blue-500 transition-all"
                   >
                     {link.name}
                   </Link>
