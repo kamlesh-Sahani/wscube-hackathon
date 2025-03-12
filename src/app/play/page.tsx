@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
-// import { Progress } from '@/components/ui/progress';
-=======
+
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -20,7 +17,8 @@ import {
   FaMedal,
 } from "react-icons/fa";
 import Link from "next/link";
->>>>>>> a540da9 (changes)
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+
 
 const programmingLanguageLogos = [
   { name: "JavaScript", logo: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" },
@@ -76,8 +74,7 @@ export default function LearningModulesPage() {
       {/* Task List */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {tasks.map((task) => (
-<<<<<<< HEAD
-          <Card key={task.id} className="hover:shadow-lg transition-shadow">
+          <Card key={task.id} className="hover:shadow-lg transition-shadow bg-black text-white">
             <CardHeader>
               <CardTitle>{task.title}</CardTitle>
               <CardDescription>{task.description}</CardDescription>
@@ -89,34 +86,13 @@ export default function LearningModulesPage() {
                   <span className="text-sm font-medium">{task.progress}%</span>
                 </div>
                 {/* <Progress value={task.progress} className="h-2" /> */}
-                <button className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition-colors">
+                <button className="w-full bg-pink-500 text-white py-2 rounded-md hover:bg-pink-600 transition-colors">
                   Start Task
                 </button>
               </div>
             </CardContent>
           </Card>
-=======
-          <motion.div
-            key={task.id}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            whileHover={{ scale: 1.05 }}
-            className="bg-gray-800 p-6 rounded-lg shadow-lg cursor-pointer hover:bg-gray-700"
-          >
-            <div className="flex items-center gap-4 mb-4">
-              {task.type === "mcq" && <FaBook className="w-8 h-8 text-green-500" />}
-              {task.type === "code" && <FaCode className="w-8 h-8 text-blue-500" />}
-              {task.type === "multiplayer" && <FaUsers className="w-8 h-8 text-purple-500" />}
-              {task.type === "ai-analysis" && <FaChartLine className="w-8 h-8 text-yellow-500" />}
-              {task.type === "puzzle" && <FaPuzzlePiece className="w-8 h-8 text-red-500" />}
-              {task.type === "brain" && <FaBrain className="w-8 h-8 text-teal-500" />}
-            </div>
-            <h3 className="text-xl font-semibold">{task.title}</h3>
-            <p className="text-gray-400">Difficulty: {task.difficulty}</p>
-            <p className="text-green-400 font-bold">Earn: {task.points} Points</p>
-          </motion.div>
->>>>>>> a540da9 (changes)
+
         ))}
       </div>
     </div>
