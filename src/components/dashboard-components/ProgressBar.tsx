@@ -20,7 +20,7 @@ export default function ProgressBar({ progress, ...props }: ProgressBarProps) {
       {...props}
     >
       <motion.div
-        className="absolute h-full rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 shadow-md shadow-orange-400/20"
+        className="absolute h-full rounded-full bg-gradient-to-r from-blue-700 via-blue-500 to-blue-400 shadow-md shadow-orange-400/20"
         initial={{ width: 0 }}
         animate={{ width: `${clampedProgress}%` }}
         transition={{ type: 'spring', damping: 20, stiffness: 120 }}

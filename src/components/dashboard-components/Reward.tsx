@@ -23,10 +23,10 @@ export default function RewardCard({
       <motion.div
         className={`relative rounded-xl border p-5 shadow-md ${
           isRedeemed
-            ? "border-gray-300 bg-gray-100"
+            ? "border-white bg-gray-100"
             : canRedeem
-            ? "border-yellow-400 bg-gradient-to-br from-yellow-50 to-yellow-100"
-            : "border-gray-300 bg-gradient-to-br from-gray-50 to-gray-100"
+            ? "border-white bg-gradient-to-br from-white to-blue-100"
+            : "border-white bg-gradient-to-br from-gray-50 to-gray-100"
         }`}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -39,7 +39,7 @@ export default function RewardCard({
         <div className="flex justify-between items-center mb-3">
           <div>
             <h3 className="text-lg font-bold text-gray-800 flex items-center gap-2">
-              <Gift className="h-5 w-5 text-yellow-500" />
+              <Gift className="h-5 w-5 text-blue-500" />
               {name}
             </h3>
             <p className="text-sm text-gray-600">{description}</p>
@@ -65,7 +65,7 @@ export default function RewardCard({
               isRedeemed
                 ? "bg-gray-300 text-gray-500 cursor-not-allowed"
                 : canRedeem
-                ? "bg-gradient-to-r from-purple-500 to-orange-400 text-white hover:brightness-110 shadow-md shadow-orange-400/40"
+                ? "bg-gradient-to-r from-blue-950 to-blue-600 text-white hover:brightness-110 shadow-md shadow-orange-400/40"
                 : "bg-gray-200 text-gray-400 cursor-not-allowed"
             }
           `}
@@ -74,7 +74,7 @@ export default function RewardCard({
         </motion.button>
         {canRedeem && (
           <motion.div
-            className="absolute -inset-1 rounded-xl border-2 border-yellow-300 pointer-events-none"
+            className="absolute -inset-1 rounded-xl border-2 border-white pointer-events-none"
             animate={{ opacity: [0.5, 1, 0.5] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           />

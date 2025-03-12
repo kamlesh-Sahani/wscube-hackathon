@@ -46,7 +46,7 @@ export default function StatCard({ label, value }: { label: string; value: strin
 
   return (
     <motion.div
-      className={`relative overflow-hidden rounded-3xl p-5 md:p-6 cursor-pointer shadow-2xl backdrop-blur-xl border border-white/10 w-full max-w-xs md:max-w-sm lg:max-w-md bg-gradient-to-br ${theme.gradient}`}
+      className={`relative overflow-hidden rounded-3xl p-5 md:p-6 cursor-pointer shadow-2xl backdrop-blur-xl border border-white/10 w-full max-w-xs md:max-w-sm lg:max-w-md bg-gradient-to-br from-white to-blue-200`}
       initial={{ scale: 0.8, opacity: 0, y: 20 }}
       animate={{ scale: 1, opacity: 1, y: 0 }}
       whileHover={{
@@ -88,12 +88,12 @@ export default function StatCard({ label, value }: { label: string; value: strin
         }}
       >
         <div
-          className={`w-40 h-40 rounded-full blur-3xl bg-gradient-to-br ${theme.gradient}`}
+          className={`w-40 h-40 rounded-full blur-3xl bg-gradient-to-br from-white to-blue-200`}
         />
       </motion.div>
       <div className="relative z-10">
         <div className="flex items-center justify-between">
-          <span className="text-sm md:text-lg font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-orange-700">
+          <span className="text-sm md:text-lg font-semibold bg-clip-text bg-gradient-to-r from-blue-950 to-blue-700">
             {label}
           </span>
           <motion.div
@@ -112,7 +112,7 @@ export default function StatCard({ label, value }: { label: string; value: strin
           </motion.div>
         </div>
         <motion.p
-          className="mt-4 md:mt-6 text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-white via-cyan-600 to-white bg-clip-text text-transparent relative"
+          className="mt-4 md:mt-6 text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-blue-400 via-cyan-600 to-blue-500 bg-clip-text text-transparent relative"
           animate={{
             backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
           }}

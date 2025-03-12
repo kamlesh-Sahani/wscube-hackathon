@@ -50,7 +50,7 @@ export default function RecommendationCard({
 
   return (
     <motion.div
-      className={`relative overflow-hidden rounded-3xl p-5 md:p-6 cursor-pointer shadow-2xl bg-gradient-to-br ${getRandomGradient()} w-full max-w-md border border-white/10`}
+      className={`relative overflow-hidden rounded-3xl p-5 md:p-6 cursor-pointer shadow-2xl bg-gradient-to-br from-white to-blue-200 w-full max-w-md border border-white/10`}
       initial={{ scale: 0.8, opacity: 0, y: 20 }}
       animate={{ scale: 1, opacity: 1, y: 0 }}
       whileHover={{
@@ -81,13 +81,13 @@ export default function RecommendationCard({
 
       <div className="relative z-10 flex justify-between flex-col gap-2 items-start">
         <div className="space-y-3">
-          <h3 className="font-bold text-xl md:text-2xl text-white drop-shadow-md">
+          <h3 className="font-bold text-xl md:text-2xl drop-shadow-md">
             {title}
           </h3>
           <motion.span
             className={`inline-block px-4 py-1.5 rounded-full text-sm font-semibold bg-gradient-to-r ${getDifficultyColor(
               difficulty
-            )} text-white shadow-md`}
+            )} text-black shadow-md`}
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
@@ -95,7 +95,7 @@ export default function RecommendationCard({
           </motion.span>
         </div>
         <motion.span
-          className="flex items-center gap-2 px-4 py-2 rounded-full backdrop-blur-sm border border-white/20 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 relative overflow-hidden shadow-md"
+          className="flex items-center gap-2 px-4 py-2 rounded-full backdrop-blur-sm border border-white/20 bg-blue-950 relative overflow-hidden shadow-md"
           whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 400 }}
         >

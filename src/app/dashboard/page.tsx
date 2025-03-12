@@ -48,7 +48,7 @@ export default function Dashboard() {
             >
               <div className="space-y-6">
                 <div className="flex items-center max-md:items-start max-md:flex-col max-md:gap-2 justify-between">
-                  <span className="text-lg font-semibold text-purple-700">
+                  <span className="text-lg font-semibold text-white">
                     Points Balance: {points} XP
                   </span>
                   <ProgressBar progress={(points % 5000) / 50} />
@@ -125,14 +125,6 @@ export default function Dashboard() {
             </GradientCard>
           </div>
         </div>
-        <div className="mt-12">
-          <GradientCard
-            gradient="from-blue-600 to-purple-600"
-            title="🥇 Recent Badges"
-          >
-            <BadgeGrid />
-          </GradientCard>
-        </div>
       </div>
     </DashboardLayout>
   );
@@ -150,8 +142,8 @@ const GradientCard = ({
   <div
     className={`p-[2px] rounded-3xl bg-gradient-to-r ${gradient} shadow-lg hover:shadow-2xl transition-all duration-300`}
   >
-    <div className="rounded-[calc(1.5rem-2px)] bg-white p-6 h-full">
-      <h2 className="text-2xl font-bold mb-6 text-gray-800">{title}</h2>
+    <div className="rounded-[calc(1.5rem-2px)] bg-black p-6 h-full">
+      <h2 className="text-2xl font-bold mb-6 text-white">{title}</h2>
       {children}
     </div>
   </div>
