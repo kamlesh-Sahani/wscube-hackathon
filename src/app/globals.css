@@ -1,6 +1,10 @@
 @import "tailwindcss";
 
+<<<<<<< HEAD
 /* @plugin "tailwindcss-animate"; */
+=======
+
+>>>>>>> a540da9 (changes)
 
 @custom-variant dark (&:is(.dark *));
 
