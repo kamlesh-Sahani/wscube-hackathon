@@ -17,7 +17,7 @@ type LayoutProps = {
 };
 
 export default function DashboardLayout({ children }: LayoutProps) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState  (false);
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
