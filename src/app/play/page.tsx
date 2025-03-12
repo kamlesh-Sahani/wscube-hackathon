@@ -1,5 +1,5 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
-import { Progress } from '@/components/ui/progress';
+// import { Progress } from '@/components/ui/progress';
 
 export default function Home() {
   const tasks = [
@@ -49,7 +49,7 @@ export default function Home() {
                   <span className="text-sm font-medium">Points: {task.points}</span>
                   <span className="text-sm font-medium">{task.progress}%</span>
                 </div>
-                <Progress value={task.progress} className="h-2" />
+                {/* <Progress value={task.progress} className="h-2" /> */}
                 <button className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition-colors">
                   Start Task
                 </button>

@@ -1,11 +1,10 @@
 "use client";
-import { ReactNode, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import {
   BellIcon,
   TrophyIcon,
   AcademicCapIcon,
   UsersIcon,
-  
   SparklesIcon,
   Bars3Icon,
   XMarkIcon,
@@ -19,7 +18,14 @@ type LayoutProps = {
 export default function DashboardLayout({ children }: LayoutProps) {
   const [isOpen, setIsOpen] = useState  (false);
   const toggleMenu = () => setIsOpen(!isOpen);
+  const [user, setUser] = useState<{ name: string; level: number; xp: number } | null>(null);
 
+  useEffect(() => {
+    // Fetch user info from API or storage
+    setUser({ name: "Saad Mehmood", level: 4, xp: 450 });
+  }, []);
+  
+  if (!user) return null; 
   return (
     <div className="flex h-screen bg-gradient-to-br from-gray-900 via-gray-950 to-gray-900">
       <aside
@@ -81,8 +87,8 @@ export default function DashboardLayout({ children }: LayoutProps) {
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-20 animate-shimmer" />
               </div>
               <div>
-                <p className="font-semibold text-gray-200">Saad Mehmood</p>
-                <p className="text-xs text-purple-300/80">Level 4 - 450 XP</p>
+              <p className="font-semibold text-gray-200">{user.name}</p>
+              <p className="text-xs text-purple-300/80">Level {user.level} - {user.xp} XP</p>
               </div>
             </div>
           </div>

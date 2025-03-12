@@ -14,7 +14,7 @@ export default function FeaturesSection() {
       icon: <FaTrophy className="w-12 h-12 mb-4 text-blue-500" />,
       gradient: "from-blue-600 to-purple-600",
       slogan: "Level Up Your Learning!",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      image: "https://plus.unsplash.com/premium_photo-1682756540097-6a887bbcf9b0?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       title: "AI-Powered Personalization",
@@ -22,7 +22,7 @@ export default function FeaturesSection() {
       icon: <FaRobot className="w-12 h-12 mb-4 text-green-500" />,
       gradient: "from-green-600 to-teal-600",
       slogan: "Learn Smarter, Not Harder!",
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      image: "https://plus.unsplash.com/premium_photo-1663100722417-6e36673fe0ed?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       title: "Leaderboards",
@@ -30,7 +30,7 @@ export default function FeaturesSection() {
       icon: <FaChartLine className="w-12 h-12 mb-4 text-yellow-500" />,
       gradient: "from-yellow-600 to-orange-600",
       slogan: "Climb to the Top!",
-      image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      image: "https://plus.unsplash.com/premium_photo-1661882403999-46081e67c401?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGNvZGV8ZW58MHx8MHx8fDA%3D",
     },
     {
       title: "Personalized Learning",
@@ -38,12 +38,12 @@ export default function FeaturesSection() {
       icon: <FaUserGraduate className="w-12 h-12 mb-4 text-pink-500" />,
       gradient: "from-pink-600 to-red-600",
       slogan: "Your Learning, Your Way!",
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
   ];
 
   return (
-    <div className="relative py-20 bg-black overflow-hidden">
+    <div className="relative py-16 bg-black overflow-hidden">
       {/* Gradient Background */}
       <div className="absolute inset-0"></div>
 

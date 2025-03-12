@@ -6,10 +6,10 @@ import HeroSection from "@/components/HeroSection";
 
 export default function LandingPage() {
   return (
-    <div className="pt-30">
+    <div className="pt-20">
       <HeroSection />
       <FeaturesSection />
-      <CallToActionSection />
+      {/* <CallToActionSection /> */}
     </div>
   );
 }

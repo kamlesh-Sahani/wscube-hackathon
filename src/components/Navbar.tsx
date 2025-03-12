@@ -3,6 +3,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Link from "next/link";
+import { LuLayoutDashboard } from "react-icons/lu";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,19 +11,18 @@ export default function Navbar() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const navLinks = [
-    { name: "Home", href: "/" },
+    { name: "Play", href: "/play" },
     { name: "Features", href: "/features" },
-    // { name: "How It Works", href: "/how-it-works" },
     { name: "Pricing", href: "/pricing" },
     { name: "Contact", href: "/contact" },
-    { name: "Dashboard", href: "/dashboard" },
+    {name: <LuLayoutDashboard className="mt-1"/>, href: '/dashboard'}
   ];
 
   return (
     <nav className="fixed z-[99] top-0 left-0 w-full bg-black/80 backdrop-blur-md ">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="text-white text-2xl font-bold">
-          <span className="text-pink-500">WSCube </span>LearnFlow
+          <Link href={'/'}><span className="text-pink-500">WSCube </span>LearnFlow</Link>
         </div>
         <ul className="hidden md:flex space-x-8">
           {navLinks.map((link, index) => (
